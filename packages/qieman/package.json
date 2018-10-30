@@ -1,0 +1,26 @@
+{
+  "name": "qieman",
+  "version": "0.0.1",
+  "description": "API client for qieman.com",
+  "main": "index.js",
+  "repository": "shawjia/qieman",
+  "scripts": {
+    "test": "../../node_modules/.bin/ava"
+  },
+  "keywords": [
+    "qieman",
+    "fund",
+    "API",
+    "ETF",
+    "且慢",
+    "基金",
+    "定投",
+    "指数基金",
+    "基金定投"
+  ],
+  "engines": {
+    "node": ">=8.6"
+  },
+  "author": "shawjia <shawjia@gmail.com> (github.com/shawjia)",
+  "license": "MIT"
+}
