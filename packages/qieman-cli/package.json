@@ -1,0 +1,26 @@
+{
+  "name": "qieman-cli",
+  "version": "1.0.0",
+  "description": "CLI for qieman(且慢)",
+  "repository": "shawjia/qieman",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "bin"
+  ],
+  "keywords": [
+    "cli",
+    "qieman",
+    "且慢"
+  ],
+  "engines": {
+    "node": ">=8.6"
+  },
+  "author": "shawjia <shawjia@gmail.com> (github.com/shawjia)",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "qieman": "^0.1.0"
+  }
+}
