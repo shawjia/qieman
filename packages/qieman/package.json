@@ -5,8 +5,11 @@
   "main": "index.js",
   "repository": "shawjia/qieman",
   "scripts": {
-    "test": "../../node_modules/.bin/ava"
+    "test": "ava"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "qieman",
     "fund",
