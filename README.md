@@ -3,4 +3,4 @@
 ## packages
 
 - [qieman](./packages/qieman#readme)
-- qieman-cli
+- [qieman-cli](./packages/qieman-cli#readme)
