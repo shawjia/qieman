@@ -4,6 +4,10 @@ const program = require('commander');
 const qieman = require('qieman');
 const pkg = require('../package.json');
 
+function formatNum(num, precision = 2) {
+  return ((num > 0 ? '+' : '') + (num * 100).toFixed(precision)).padStart(7);
+}
+
 program.version(pkg.version);
 
 program
@@ -21,6 +25,9 @@ program
             name: item.fund.fundName,
             short: item.variety,
             unit: item.planUnit,
+            buy: item.unitValue,
+            now: `${item.fund.nav} ${formatNum(item.dailyReturn)}% (${item.fund.navDate})`,
+            profit: `${formatNum(item.profit || item.accProfit)}%`,
           })),
         );
 
@@ -28,15 +35,22 @@ program
       }, []);
 
 
-      console.log(['code', 'name', 'short', 'unit'].join('\t'));
-      console.log(all.map(v => [v.code, v.name, v.short, v.unit].join('\t')).join('\n'));
+      console.log(['code', 'name', 'short', 'unit', 'buy', 'now', 'profit']
+        .join('\t'));
+      console.log(all.map(v => [
+        v.code, v.name, v.short, v.unit, v.buy, v.now, v.profit,
+      ].join('\t')).join('\n'));
 
       // https://nodejs.org/api/console.html#console_console_table_tabulardata_properties
       // Added in: v10.0.0
       if (console.table) {
         console.log();
 
-        console.table(all.map(({ code, unit }) => ({ code, unit })));
+        console.table(all.map(({
+          code, unit, buy, now, profit, short,
+        }) => ({
+          code, unit, buy, now, profit, short,
+        })));
       }
     } catch (error) {
       console.error(error);
