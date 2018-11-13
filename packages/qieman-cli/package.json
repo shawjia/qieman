@@ -1,6 +1,6 @@
 {
   "name": "qieman-cli",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "CLI for qieman(且慢)",
   "repository": "shawjia/qieman",
   "scripts": {
